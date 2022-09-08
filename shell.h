@@ -30,6 +30,7 @@ int compareEnv(char *s1, char *s2);
 void execute_proc(char **cmd);
 char **identify_string(char *parameter);
 void controlC(int sig);
+char *find_command(char *command);
 
 
 #endif
