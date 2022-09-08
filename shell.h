@@ -14,7 +14,7 @@
 extern char **environ;
 
 int pid(void);
-char*show_input(void);
+char *show_input(void);
 void prompt(void);
 char *_strcat(char *src);
 int _strlen(char *str);
