@@ -23,5 +23,7 @@ char *read_input(void)
 		exit(0);
 	}
 
+	input_buffer = handle_comment(input_buffer);
+
 	return (input_buffer);
 }
