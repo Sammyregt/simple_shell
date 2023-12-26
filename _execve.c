@@ -6,10 +6,11 @@
   *
   * @input: The argument from the buffer
   * @av: Array of argument
+  * @env: Envronment variables
   *
   */
 
-void execute_command(char *input, char **av)
+void execute_command(char *input, char **av, char **env)
 {
 	char *args[10];
 	char *path, *shell_name;
@@ -20,6 +21,8 @@ void execute_command(char *input, char **av)
 	num_args = tokenize_input(input, args);
 
 	if (num_args == 0)
+		return;
+	if (handle_builtin_commands(args, num_args, input, env) == 1)
 		return;
 	path = get_file_path(args[0]);
 
