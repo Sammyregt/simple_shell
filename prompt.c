@@ -1,19 +1,11 @@
 #include "shell.h"
 
 /**
- * main - Main entry point for the shell program
- *
- * @ac: number of items in av
- * @av: a pointer to a NULL terminated array of strings
- *
- * Return: Always 0 (Success)
+ * print_prompt - print the prompt to the user
  */
 
-int main(int ac, char **av)
+void print_prompt(void)
 {
-	(void) ac;
-	(void) av;
-
-	write(STDOUT_FILENO, "$ ", 3);
-	return (0);
+	if (isatty(STDIN_FILENO))
+		write(STDOUT_FILENO, "$ ", 3);
 }
