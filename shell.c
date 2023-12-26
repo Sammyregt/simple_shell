@@ -12,13 +12,13 @@
 int main(int ac, char **av)
 {
 	(void) ac;
-	(void) av;
 	char *input_buffer;
 
 	while (1)
 	{
 		print_prompt();
 		input_buffer = read_input();
+		execute_command(input_buffer, av);
 		free(input_buffer);
 	}
 
