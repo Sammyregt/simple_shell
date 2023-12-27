@@ -12,8 +12,8 @@
 
 int main(int ac, char **av, char **env)
 {
-	(void) ac;
 	char *input_buffer;
+	(void) ac;
 
 	while (1)
 	{
